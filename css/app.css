@@ -1,0 +1,128 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ef9c66;
+  width: 100%;
+  height: 100%;
+}
+
+.calculator {
+  width: 400px;
+  height: 600px;
+  background-color: #eaedef;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.result {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  height: 140px;
+  background-color: #eaedef;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.history {
+  text-align: right;
+  margin: 0;
+  font-size: 16px;
+  color: #919191;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input {
+  text-align: right;
+  margin: 5px 0;
+  font-size: 32px;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keyboard {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding-top: 140px; /* Sesuaikan dengan tinggi .result */
+  margin-top: auto;
+}
+
+.operator,
+.number,
+.empty {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: black;
+}
+
+button.operator {
+  background-color: #d3d3d3;
+}
+
+button:nth-child(4) {
+  font-size: 24px;
+  background-color: #20b2aa;
+}
+
+button:nth-child(8) {
+  font-size: 24px;
+  background-color: #ffa500;
+}
+
+button:nth-child(12) {
+  font-size: 24px;
+  background-color: #f08080;
+}
+
+button:nth-child(16) {
+  font-size: 24px;
+  background-color: #7d93e0;
+}
+
+button:nth-child(20) {
+  font-size: 24px;
+  background-color: #9477af;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s;
+}
